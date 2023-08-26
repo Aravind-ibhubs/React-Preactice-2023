@@ -1,24 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+///import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div>
+        <h1 class="titleOfPage">Pigeon</h1>
+        <p style="background: blueviolet;color:white">Tis is a bird</p>
+        <p>There atre trwo wings</p>
+        <p>There are brain with navigating system</p>
+        <div>
+          <h2>Provide some help to pigeon is a responsibile.</h2>
+          <p>It a Human responsibility...</p>
+          <h2>Pigeon is environment friendly.</h2>
+          <p>Muslims is like to feed the pigeon with caging them.</p>
+        </div>
+        <div class="button-container">
+            <a class="button-class" href="testing2.html" target="_blank">Go to Kings page</a>
+            <a class="button-class" href="PsudoClass.html">Practice of psudo class</a>
+            <a class="button-class" href="testCombinator.html">Practice of Combinator class</a>
+        </div>
+      </div>
   );
 }
 
