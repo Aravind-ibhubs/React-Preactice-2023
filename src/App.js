@@ -1,25 +1,21 @@
-///import './App.css';
+import React from "react";
+import { BrowserRouter, Route, Routes} from "react-router-dom";
+import Home from "./Home/Home";
+import About from "./About/About";
+import Context from "./Context/Context";
+import Navigation from "./Navigate/Navigate";
 
 function App() {
-  return (
-      <div>
-        <h1 class="titleOfPage">Pigeon</h1>
-        <p style="background: blueviolet;color:white">Tis is a bird</p>
-        <p>There atre trwo wings</p>
-        <p>There are brain with navigating system</p>
-        <div>
-          <h2>Provide some help to pigeon is a responsibile.</h2>
-          <p>It a Human responsibility...</p>
-          <h2>Pigeon is environment friendly.</h2>
-          <p>Muslims is like to feed the pigeon with caging them.</p>
-        </div>
-        <div class="button-container">
-            <a class="button-class" href="testing2.html" target="_blank">Go to Kings page</a>
-            <a class="button-class" href="PsudoClass.html">Practice of psudo class</a>
-            <a class="button-class" href="testCombinator.html">Practice of Combinator class</a>
-        </div>
-      </div>
-  );
+  return(
+    <BrowserRouter>
+      <Navigation />
+      <Routes>
+        <Route exact path="/" Component={Home} />
+        <Route path="/about" Component={About} />
+        <Route path="/context" Component={Context} />
+      </Routes>
+    </BrowserRouter>
+  )
 }
 
 export default App;
