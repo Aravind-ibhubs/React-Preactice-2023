@@ -1,10 +1,15 @@
 ///import './App.css';
 
 function App() {
+  const tParagraph = {
+    backgroundColor: 'blue',
+    color: 'white'
+  };
+
   return (
       <div>
         <h1 class="titleOfPage">Pigeon</h1>
-        <p style="background: blueviolet;color:white">Tis is a bird</p>
+        <p style={tParagraph}>Tis is a bird</p>
         <p>There atre trwo wings</p>
         <p>There are brain with navigating system</p>
         <div>
