@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "../App.css"
 
 function Navigation() {
@@ -7,18 +7,17 @@ function Navigation() {
         width: '60vw'
     };
 
-
     return (
         <nav style={navMainWidth}>
             <ul className="button-container">
                 <li>
-                    <Link to="/">Home</Link>
+                    <NavLink exact to="/" className={({ isActive }) => (isActive ? 'active-link': '')}>Home</NavLink>
                 </li>
                 <li>
-                    <Link to="/about">About</Link>
+                    <NavLink to="/about" className={({ isActive }) => (isActive ? 'active-link': '')}>About</NavLink>
                 </li>
                 <li>
-                    <Link to="/context">Context</Link>
+                    <NavLink to="/context" className={({ isActive }) => (isActive ? 'active-link': '')}>Context</NavLink>
                 </li>
             </ul>
         </nav>

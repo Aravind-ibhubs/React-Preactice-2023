@@ -28,9 +28,17 @@ body > div > a {
 }
 .button-container {
   width: 50vw;
+  display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  background-color: aqua;
+  padding: 15px;
+}
+.active-link {
+  background-color: black;
+  color: rgb(219, 209, 209);
+  padding: 10px;
 }
 .titleOfPage {
   padding: 10px;
@@ -50,3 +58,4 @@ body > div > a {
   padding: 0.009cm;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
