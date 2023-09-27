@@ -1,15 +1,20 @@
-import React from "react";
+import React,{useState, useEffect} from "react";
 import "../App.css";
 
-function About() {
+function About(){
+    const [timerIn, decTimer] = useState(100);
+
+    useEffect(() => {
+        setInterval(() => {
+            decTimer((timerIn) => timerIn - 1);
+        }, 10000);
+    })
+
     return (
         <div className="page-box">
-            <h1>Once upon a time, there is a myth <mark class="mark-class">King Aravind</mark></h1>
-            <p>There is a king aravind</p>
-            <p>It is not a myth anymore</p>
-            <p>He is coming are again</p>
+            <h1>Timer is <mark className="mark-class">{ timerIn }</mark></h1>
         </div>
-    )
+        )
 }
 
 

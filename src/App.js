@@ -14,8 +14,8 @@ function App() {
       <Suspense fallback={<div>Loading.....</div>}>
         <Navigation />
         <Routes>
-          <Route path='*' element={<NotFound />}/>
-          <Route path="/" index Component={Home} />
+          <Route path='*' element={<NotFound pageStatus="404" />}/>
+          <Route path="/" index element={<Home page1="king" />} />
           <Route path="/about" Component={About} />
           <Route path="/context" Component={Context} />
         </Routes>

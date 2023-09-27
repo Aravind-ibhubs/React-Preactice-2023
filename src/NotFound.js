@@ -1,10 +1,11 @@
-import React from "react"
+import React from "react";
+import "./App.css";
 
-function NotFound() {
+function NotFound(props) {
     return (
-        <>
-            <h1>Page  not Found</h1>
-        </>
+        <div className="page-box">
+            <h1><marker>{props.pageStatus}</marker> Page  not Found</h1>
+        </div>
     )
 }
 
