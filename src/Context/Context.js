@@ -1,24 +1,63 @@
-import React from "react";
+import React,{Component} from "react";
 import "../App.css";
 
-function Context() {
-    return (
-        <div className="page-box">
-            <h3>Universal facts</h3>
-            <p>Mahatma atma</p>
-            <p>Prushu pathi arundathi ki one side lover.</p>
-            <h3>Amreshi puri is a marriage pantulu.Try to do marriage for arundathi and pashu pathi.</h3>
-            <h3>Sunny leone age is 90.But still virgin</h3>
-            <h3>All porn stars are virgins forever</h3>
-            <div>
-                <p>sivaji shinde to pashu pathi: Gari lo niku teliyani buthalu unnay.</p>
-                <p>arundathi: nuvvu nannu emi cheyya levu ra.</p>
-                <h3>Pashu pasthi to arundathi: Nijam kada.</h3>
-                <h3>arundathi to pashu pathi: I know, u don't have matter.</h3>
-                <h3>pashu pathi: adhi nuvve cheppali</h3>
+class Context extends Component {
+    constructor() {
+        super();
+        this.state = {
+            divColor : "orange",
+            showChild: true
+        }
+    }
+
+    componentDidMount() {
+        setTimeout(() => {
+            this.setState({divColor : "yellow"});
+        },2000)
+    }
+
+    componentDidUpdate() {
+        let paraElement = document.getElementById("para1");
+        paraElement.innerHTML  = "The updated : " + this.state.divColor;
+    }
+
+    deleteChild = () => {
+        this.setState({showChild: !this.state.showChild});
+    }
+
+    render() {
+        let pChild;
+
+        if (this.state.showChild) {
+            pChild = <SubContext />;
+        }
+        return (
+            <div className="body-container">
+                {pChild}
+                <h3>Sunny leone age is 90.But still virgin</h3>
+                <h3>present state : {this.state.divColor}</h3>
+                <div id="para1"></div>
+                <button onClick={this.deleteChild}>{this.state.showChild ? "Remove child" : "show child"}</button>
             </div>
-        </div>
-    )
+        )
+    }
+}
+
+class SubContext extends Component {
+    componentWillUnmount() {
+        alert("This child is going to removed");
+    }
+
+    render() {
+        return (
+            <>
+                <h3>Universal facts</h3>
+                <p>Mahatma atma</p>
+                <p>Prushu pathi arundathi ki one side lover.</p>
+                <h3>Amreshi puri is a marriage pantulu.Try to do marriage for arundathi and pashu pathi.</h3>
+            </>
+        )
+    }
 }
 
 
