@@ -56,9 +56,6 @@ class Home extends React.Component {
                     <p>It a Human responsibility...</p>
                     <p>Pigeon is environment friendly.</p>
                     <p>Muslims is like to feed the pigeon with caging them.</p>
-                    <video width="320" height="240" controls>
-                        <source src="https://www.facebook.com/watch?v=1015709976133525" type="video/mp4" />
-                    </video>
                 </div>
                 <button onClick={this.changeName}>update from board</button>
             </div>

@@ -47,6 +47,10 @@
   list-style-type: none;
 }
 
+.near-input {
+  margin: 10px;
+}
+
 /* Mobile-first styles (applies to screens 320px and wider) */
 
 /* Small screens (up to 360px) */
@@ -131,4 +135,3 @@
     width: 35vw;
   }
 }
-
