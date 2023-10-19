@@ -1,4 +1,4 @@
-import React,{Component} from "react";
+import React,{Component, memo} from "react";
 import "../App.css";
 
 class Context extends Component {
@@ -44,9 +44,6 @@ class Context extends Component {
 }
 
 class SubContext extends Component {
-    componentWillUnmount() {
-        alert("This child is going to removed");
-    }
 
     render() {
         return (
@@ -61,4 +58,4 @@ class SubContext extends Component {
 }
 
 
-export default Context
+export default memo(Context)

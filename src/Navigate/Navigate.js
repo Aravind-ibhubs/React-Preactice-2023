@@ -11,7 +11,7 @@ function Navigation() {
     });
 
     useEffect(() => {
-        setInterval(() => {
+        let speedTimer = setInterval(() => {
             incTimer(prevState => {
                 if(prevState.second >  60) {
                     return {...prevState, "minutes" : prevState.minutes + 1,"second" : 0}
@@ -21,7 +21,9 @@ function Navigation() {
                     return {...prevState, "second" : prevState.second + 1}
                 }
             });
-        }, 5000)
+        }, 1000)
+
+        return () => clearInterval(speedTimer);
     },[timer]);
 
     return (
